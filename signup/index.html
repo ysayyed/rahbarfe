@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        let height = window.innerHeight 
+        let width =  window.innerWidth
+        document.getElementById('container').style.height = height
+        document.getElementById('container').style.width = width
+    </script>
+</head>
+<body >
+    <div id="container">
+        <nav id="navbar">
+            <div> <a href="">Home</a> </div>
+            <div> <a href="">About</a>  </div>
+            <div> <a href="">Products</a> </div>
+            <div> <a href="">Services</a> </div>
+        </nav> <br> <br> <br>
+        <div id="signup">
+            <form action="" id="signupform">
+                <h1 class="labelClass">Signup</h1>
+                <hr> <br>
+                <label class="labelClass" for="">First Name</label> <br>
+                <input class="inputClass" type="text"> <br>
+                <label class="labelClass" for="">Last Name</label> <br>
+                <input class="inputClass" type="text"> <br>
+                <label class="labelClass" for="">Email</label> <br>
+                <input class="inputClass" type="email"> <br>
+                <label class="labelClass" for="">Password</label> <br>
+                <input class="inputClass" type="password"> <br>
+                <label class="labelClass" for="">Mobile</label> <br>
+                <input class="inputClass" type="text"> <br>
+                <label class="labelClass" for="">State</label> <br>
+                <select  name="state" id="" class="selectdrpdwn">
+                    <option value="" selected>Select...</option>
+                    <option value="">Madhya Pradesh</option>
+                    <option value="">Haryana</option>
+                </select> <br>
+                <table>
+                    <tr>
+                        <td style="width: 60%;"><label class="labelClass" for="">City</label></td>
+                        <td><label class="labelClass" for="">Zipcode</label></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <select  name="state" class="selectdrpdwn">
+                                <option value="" selected>Select...</option>
+                                <option value="">Indore</option>
+                                <option value="">Bhopal</option>
+                            </select>
+                        </td>
+                        <td><input class="inputClass" type="text"></td>
+                    </tr>
+                </table> <br>
+                <input class="agree" type="checkbox" > 
+                <span class="agreeSpan">I agree to the 
+                    <a href="" id="tnc">Terms and Conditions</a>
+                </span> <br> <br>
+                <div id="signupdiv">
+                    <button class="signupButton">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

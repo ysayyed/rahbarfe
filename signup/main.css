@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+}
+
+#container {
+  background: linear-gradient(106.27deg, rgba(255, 255, 255, 0.5) -59.88%, rgba(102, 205, 170, 0.5) 0.26%, rgba(117, 210, 178, 0.5) 87.02%), linear-gradient(147.7deg, #226321 17.25%, #0E0D0D 81.66%);
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+  /* display: block; */
+  width: 100%;
+  height: 100vh;
+}
+
+
+#navbar {
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  background: #F0FFFF;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px #226321;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#navbar>div {
+  margin: 10px;
+  padding: 10px;
+}
+
+#navbar>div>a {
+  text-decoration: none;
+  color: #226321;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#signup {
+  margin: 0 auto;
+  width: 500px;
+  height: 712px;
+  background: #F0FFFF;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 11px;
+}
+
+#signupform {
+  padding: 7%;
+}
+
+.labelClass {
+  margin: 0% 2% 2% 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #226321;
+  font-weight: bold;
+}
+
+.inputClass {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 35px;
+  background: rgba(102, 205, 170, 0.21);
+  mix-blend-mode: normal;
+  outline: none;
+  border: none;
+  margin: 0% 2% 2% 0%;
+}
+.inputClass:hover{
+  background-color:  rgba(102, 205, 170, 0.40);;
+}
+.inputClass:focus{
+  border-left: 5px solid #226321;
+}
+
+.selectdrpdwn{
+  width: 100%;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 37px;
+  background: rgba(102, 205, 170, 0.21);
+  mix-blend-mode: normal;
+  outline: none;
+  border: none;
+  margin: 0% 2% 1% 0%;
+  padding: 2%;
+}
+
+.agree[type=checkbox]{
+  border: 1px solid #D3D3D3;
+  /* border-radius: 5px; */
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.agreeSpan{
+  color: #226321;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#tnc{
+  text-decoration: none; 
+  color: #226321
+}
+
+#tnc:hover{
+  color: seagreen;
+  border-bottom: 2px solid seagreen;
+}
+
+.agree:checked {
+  background-color:#226321;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+}
+#signupdiv{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signupButton{
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 40px;
+  color: #226321;
+  font-weight: bold;
+  font-size: 20px;
+  background-color:rgba(102, 205, 170, 0.21) ;
+  cursor: pointer;  
+}
+.signupButton:hover{
+  background-color: rgba(102, 205, 170, 0.4);
+}
+
+@media screen and (max-width:1000px) {
+  #signup {
+    width: 70%;
+  }
+}
