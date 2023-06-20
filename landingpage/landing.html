@@ -7,73 +7,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar" > 
 </head>
 
 <body>
     <div id="container">
         <nav id="navbar">
             <div id="navdiv">
-                <div style="padding: 0%; padding-top: 5px; width: auto; "><img src="../logo.svg" alt="" width="50">
+                <div style="padding: 0%; padding-top: 5px; width: auto; ">
+                    <a href="#"><img src="../logo.svg" alt="" width="50"></a>
                 </div>
                 <!-- <img href="#" alt=""> -->
-                <div> <a href="">Home</a> </div>
-                <div> <a href="">About</a> </div>
-                <div> <a href="">Products</a> </div>
-                <div> <a href="">Services</a> </div>
+             <a href="">Home</a> 
+             <a href="">About</a> 
+             <a href="">Products</a> 
+             <a href="">Services</a>
+             <a href="">FAQ</a>
+             <div id="searchdiv"> 
+                <input type="text"> &nbsp;
+                <i class="fa fa-search" ></i>
+             </div> 
+            </div>
+            <script>
+                const alert = ()=>{
+                    return window.alert("You clicked")
+                }
+            </script>
+            <div id="cart" onclick="alert()">
+                <p><i class="fa fa-shopping-cart"  aria-hidden="true"></i></p>
+                <div>100</div>
             </div>
         </nav>
         <div id="subcontainer">
             <div style="display: flex;">
                 <div id="sidenav">
+                    <div id="profile">
+                        <img src="../avatar.png" alt=""> <br>
+                        <p>Welcome, <span> User </span></p>
+                        <a href="">Edit Profile</a>
+                    </div>
+                    <div>
+                        <!-- <h2>Accordion</h2> -->
 
+                        <button class="accordion"><i class="fa fa-cubes" style="font-size:24px; color:dodgerblue;"></i>&nbsp; Orders</button>
+                        <div class="panel">
+                            <ul>
+                                <li>My Orders</li>
+                                <li>My Cart</li>
+                                <li>History</li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion"><i class="fa fa-bars" style="font-size:24px; color: lawngreen"></i>&nbsp;Categories</button>
+                        <div class="panel">
+                            <button class="accordion">First</button>
+                            <div class="panel">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis totam dicta
+                                id soluta laboriosam qui eum eaque deleniti eos quaerat fugiat sint praesentium
+                                similique placeat, dolorum a. Possimus, suscipit!
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion"><i class="fa fa-filter" style="font-size:24px; color:red;"></i>&nbsp;Filters</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion"><i class="fa fa-gears" style="font-size:24px; color:yellow;"></i>&nbsp;Account settings</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <script>
+                        var acc = document.getElementsByClassName("accordion");
+                        var i;
+
+                        for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function () {
+                                this.classList.toggle("active");
+                                var panel = this.nextElementSibling;
+                                if (panel.style.display === "block") {
+                                    panel.style.display = "none";
+                                } else {
+                                    panel.style.display = "block";
+                                }
+                            });
+                        }
+                    </script>
                 </div>
                 <div id="mainarea">
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
+                    <div id="notify">
+                        <h1>Featured products </h1>
                     </div>
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
+                    <div id="productdiv">
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
                     </div>
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
+                    <div id="notify">
+                        <h1>Featured products </h1>
                     </div>
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="../product.jpeg" alt="" width="100%" height="70%">
-                        <h1>Product 1</h1>
-                        <h2>Rs. 3000</h2>
-                        <input type="number" min="0" max="100">
-                        <button>Add to Cart</button>
+                    <div id="productdiv">
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <a href="">
+                                <img src="../product.jpeg" alt="" title="Click to know more">
+                            </a>
+                            <p><b>Digital Wall clock</b></p>
+                            <p><b>Rs. 3000</b></p>
+                            <button> <i class="fa fa-cart-arrow-down"  aria-hidden="true"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
