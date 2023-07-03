@@ -246,13 +246,12 @@ ul.breadcrumb li a:hover {
     transition: .5s ease;
 }
 .container {
-    width: 90%;
+    width: 100%;
     display: flex;
-    margin-right: 2%;
     flex-direction: column;
+    justify-content: center;
     padding: 2%;
     border-radius: 20px ;
-    margin-right: 5%;
   }
   
   /* Hide the images by default */
@@ -297,9 +296,10 @@ ul.breadcrumb li a:hover {
   /* Container for image text */
   .caption-container {
     display: flex;
-    font-family: 'Kavoon','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 40%;
+    font-weight: bold;
     text-align: center;
-    background: turquoise;
+    background: palegreen;
     vertical-align: center;
     justify-content: space-between;
     color: black;
@@ -323,12 +323,18 @@ ul.breadcrumb li a:hover {
   /* Six columns side by side */
 .column {
     width: 20%;
-    margin: 2%;
+    box-shadow: 0px 0px 5px cadetblue;
+    margin: 1%;
+    text-align: center;
+    border-radius: 30px;
 }
 
-.column>img{
-    width: 100%;
+.colactive{
+    transform: scale(1.15);
+    background: darkslategray;
+    box-shadow: 0px 0px 1px #0E0D0D;
 }
+
   
   /* Add a transparency effect for thumnbail images */
   .demo {
@@ -341,70 +347,19 @@ ul.breadcrumb li a:hover {
   }
 
   .specification{
-    font-family: 'Calistoga','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 2%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background: #0E0D0D;
     border-radius: 20px;
-    box-shadow: 1px 1px 5px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* box-shadow: 1px 1px 5px black; */
     /* border: 2px solid black; */
-    color: #0E0D0D;
-    margin: 2%;
-    font-weight: lighter;
-    font-stretch:normal;
-  }
-
-  .productdetails>input{
-    width: 10%;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: palegreen;
-    padding: 10px;
-    font-size: 20px;
-    transition: width .5s ease;
-    text-align: center;
-    border: 2px solid black;
-  }
-
-  .productdetails>input:hover{
-    border: 2px solid turquoise;
-  }
-
-  .productdetails>input:focus{
-    border: 2px solid turquoise;
-  }
-
-  .productdetails>button {
-    outline: none;
-    border: none;
-    height: 45px;
-    background-color: #0E0D0D;
     color: white;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 10px;
-
+    margin: 2% 10% 2% 10%;
   }
 
-  .productdetails>button:hover {
-    outline: none;
-    border: none;
-    background: turquoise;
-    color: black;
-    text-align: center;
-    /* top: 50%; */
-    cursor: pointer;
-}
-
-  .productdetails{
-    /* border: 1px solid orange; */
-    width: 80%;
-    height: auto;
-    background: turquoise;
-    padding: 3%;
-  }
+  
 
 .currentproduct{
     display: flex;
@@ -535,7 +490,7 @@ ul.breadcrumb li a:hover {
 }
 
 .sidenav {
-    width: calc(100% - 80%);
+    width: 250px;
     height: calc(100dvh - 40px);
     margin-top: 40px;
     background: #0E0D0D;
@@ -609,8 +564,8 @@ ul.breadcrumb li a:hover {
 
 #mainarea {
     margin-top: 40px;
-    margin-left: calc(100% - 80%);
-    width: calc(100% - 20%);
+    margin-left: 250px;
+    width: 100%;
     /* padding-top: 2%; */
     overflow-y: scroll;
 }
@@ -671,3 +626,70 @@ ul.breadcrumb li a:hover {
 .social>a:hover {
     color: lawngreen;
 }
+
+.stimetable{
+    background: darkslategray;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+
+.thead{
+    color: #0E0D0D;
+    padding: 1%;
+    background: palegreen;
+}
+
+.headrow>th:first-child{
+    border-top-left-radius: 20px;
+}
+
+.headrow>th:last-child{
+    border-top-right-radius: 20px;
+}
+.trow>td{
+    padding: 1%;
+}
+
+.rowactive{
+ background: palegreen;
+ color: #0E0D0D;
+ font-size: 30px;
+ font-weight: bold;
+}
+.rowactive>td:nth-child(4){
+    color: green;
+}
+
+input[type=month]{
+    background: darkslategray;
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    margin:3%;
+    padding: 1%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.monthrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.monthrow>label{
+    font-size: 30px;
+}
+

@@ -259,8 +259,49 @@
                     </div>
 
                     <div id="Specification" class="tabcontent">
-                        <h1>Paris</h1>
-                        <p>Paris is the capital of France.</p>
+                        
+                        <input id="1" type="checkbox" onChange="showHide(1)">
+                        <label for="first">Check1</label> <br>
+
+                        <input id="2" type="checkbox" onclick="showHide(2)">
+                        <label for="second">Check2</label>
+    
+                        <ul id="forFirst" hidden="true">
+                            <li>first content 1</li>
+                            <li>first content 2</li>
+                        </ul>
+                        <ul id="forSecond" hidden="true">
+                            <li >Second content 1</li>
+                            <li>Second content 2</li>
+                        </ul>
+                        
+                        <script>
+                            const showHide = (id) => {
+                                const doc = document.getElementById(id)
+                                switch(id){
+                                    case 1:
+                                        const f = document.getElementById('forFirst')
+                                        if(doc.checked){
+                                            f.hidden = false;
+                                        }
+                                        else{
+                                            f.hidden = true;
+                                        }
+                                        break
+                                    case 2:
+                                        const d = document.getElementById('forSecond')
+                                        if(doc.checked){
+                                            d.hidden = false;
+                                        }
+                                        else{
+                                            d.hidden = true;
+                                        }
+                                }
+
+                            }
+
+                        </script>
+
                     </div>
 
                     <div id="Warranty" class="tabcontent">
