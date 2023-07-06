@@ -150,131 +150,97 @@
                 <div class="specification">
                     <div class="currentproduct">
                         <div class="container">
-                            <div class="monthrow">
-                                <label for="">Select month: </label>
-                                <input class="monthinput" type="month">
-                            </div>
-                            <div class="mySlides">
-                                <!-- <img src="../wristwatch.jpeg"> -->
-                                <table class="stimetable">
-                                    <tr class="headrow">
-                                        <th class="thead">Current Event / Salah</th>
-                                        <th class="thead">Start time</th>
-                                        <th class="thead">End time</th>
-                                        <th class="thead">Ends in</th>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Fajr</td>
-                                        <td>04:18 AM</td>
-                                        <td>05:46 AM</td>
-                                        <td>Ended</td>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Makrooh time</td>
-                                        <td>05:46 AM</td>
-                                        <td>06:06 AM</td>
-                                        <td>Ended</td>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Zawal</td>
-                                        <td>12:31 PM</td>
-                                        <td>12:36 PM</td>
-                                        <td>Ended</td>
-                                    </tr>
-                                    <tr class="trow rowactive">
-                                        <td>Zuhr</td>
-                                        <td>12:36 PM</td>
-                                        <td>05:10 PM</td>
-                                        <td >4 hour 34 mins left</td>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Asr</td>
-                                        <td>05:10 PM</td>
-                                        <td>07:18 PM</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Maghrib</td>
-                                        <td>07:18 PM</td>
-                                        <td>08:48 PM</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr class="trow">
-                                        <td>Isha</td>
-                                        <td>08:48 PM</td>
-                                        <td>04:19 AM</td>
-                                        <td>-</td>
-                                    </tr>
-                                </table>
-                            </div>
+                            <h1>Your Cart <span><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </span>  </h1>
+                            <table class="cartTable">
+                                
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Image</th>
+                                    <th>Particulars</th>
+                                    <th>Rate</th>
+                                    <th>Qty</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr class="trow">
+                                    <td>1</td>
+                                    <td><img src="../product.jpeg" alt="" width="100"></td>
+                                    <td>Shoes</td>
+                                    <td>3000</td>
+                                    <td><input class="qtyinput" type="number" value="1" min="1" max="10"
+                                            onclick="getQty()" onchange="myFunc()"></td>
+                                    <td class="amount"></td>
+                                </tr>
+                                <tr class="trow">
+                                    <td>2</td>
+                                    <td><img src="../product2.jpeg" alt="" width="100"></td>
+                                    <td>Hand bag</td>
+                                    <td>2000</td>
+                                    <td><input class="qtyinput" type="number" value="1" min="1" max="10"
+                                            onclick="getQty()" onchange="myFunc()"></td>
+                                    <td class="amount"></td>
+                                </tr>
+                                <tr class="trow">
+                                    <td>3</td>
+                                    <td><img src="../product4.jpeg" alt="" width="100"></td>
+                                    <td>Wrist watch</td>
+                                    <td>2500</td>
+                                    <td><input class="qtyinput" type="number" value="1" min="1" max="10"
+                                            onclick="getQty()" onchange="myFunc()"></td>
+                                    <td class="amount"></td>
+                                </tr>
+                                <tr id="lastrow">
+                                    <td colspan="4" style="text-align: right;">Total</td>
+                                    <td id="totalqty"></td>
+                                    <td id="totalamount"></td>
+                                </tr>
 
-                            <div class="mySlides">
-                                <!-- <img src="../wristwatch2.jpeg"> -->
-                            </div>
+                            </table><br>
 
-                            <div class="mySlides">
-                                <!-- <img src="../wristwatch3.jpeg"> -->
-                            </div>
+                            <script>
+                                function myFunc() {
+                                    const a = document.getElementsByClassName('qtyinput')
+                                    const r = document.getElementsByClassName('trow')
+                                    for (let i = 0; i < a.length; i++) {
+                                        r[i].children[5].innerHTML = a[i].value * r[i].children[3].innerHTML
+                                    }
+                                }
+                                function getQty() {
+                                    const a = document.getElementsByClassName('qtyinput')
+                                    const r = document.getElementsByClassName('amount')
+                                    // console.log(r)
+                                    let totalQty = 0;
+                                    let amt = 0;
+                                    for (let i = 0; i < a.length; i++) {
+                                        totalQty += Number(a[i].value)
+                                        document.getElementById('totalqty').innerHTML = totalQty
+                                    }
+                                    for (let i = 0; i < r.length; i++) {
+                                        amt += Number(r[i].innerHTML)
+                                    }
+                                    document.getElementById('totalamount').innerHTML = amt;
+                                }
+                                myFunc();
+                                getQty()
+                            </script>
 
-                            <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
-                            <a class="next" onclick="plusSlides(1)">❯</a> -->
-                            <div class="row">
-                            <div class="caption-container">
-                                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                                <h3 id="caption"></h3>
-                                <a class="next" onclick="plusSlides(1)">❯</a>
-                            </div>
-                            </div>
-                            <div class="row">
-                                <div class="column colactive" onclick="currentSlide(1)" alt="02 July">
-                                    <h2>02 July</h2>
-                                    <h4>Sunday</h4>
-                                </div>
-                                <div class="column " onclick="currentSlide(2)">
-                                    <h2>03 July</h2>
-                                    <h4>Monday</h4>
-                                </div>
-                                <div class="column " onclick="currentSlide(3)">
-                                    <h2>04 July</h2>
-                                    <h4>Tuesday</h4>
-                                </div>
-                            </div>
                         </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button id="checkout" onclick="getdetails()">Proceed to checkout</button>
                         <script>
-                            let slideIndex = 1;
-                            showSlides(slideIndex);
-
-                            function plusSlides(n) {
-                                showSlides(slideIndex += n);
-                            }
-
-                            function currentSlide(n) {
-                                showSlides(slideIndex = n);
-                            }
-
-                            function showSlides(n) {
-                                let i;
-                                let slides = document.getElementsByClassName("mySlides");
-                                let dots = document.getElementsByClassName("column");
-                                let captionText = document.getElementById("caption");
-                                if (n > slides.length) { slideIndex = 1 }
-                                if (n < 1) { slideIndex = slides.length }
-                                for (i = 0; i < slides.length; i++) {
-                                    slides[i].style.display = "none";
-                                }
-                                for (i = 0; i < dots.length; i++) {
-                                    dots[i].className = dots[i].className.replace(" colactive", "");
-                                }
-                                slides[slideIndex - 1].style.display = "block";
-                                dots[slideIndex - 1].className += " colactive";
-                                captionText.innerHTML = dots[slideIndex - 1].children[0].innerHTML ;
+                            function getdetails(){
+                                const amount = document.getElementById('totalamount').innerHTML
+                                window.alert(`You are checking out for total amount of Rs. ${amount}`)
                             }
                         </script>
                     </div>
                 </div>
+
                 <br>
                 <div>
-                    
+
                 </div>
                 <!-- Main area end -->
                 <!-- Footer start -->
@@ -284,18 +250,18 @@
                             <i class="fa fa-whatsapp"></i></a>
                         &nbsp;&nbsp;&nbsp;
                         <a href=""><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;
-                        <a href=""><i class="fa fa-youtube-play" ></i></a>&nbsp;&nbsp;&nbsp;
-						<a href="">Privacy Policies</a>
-						<a href="">Terms and conditions</a>
-						<a href="">Shipping and Refunds</a>
-						<a href="">FAQ</a>
-					</div>
-				</div>
-				<!-- Footer end -->
-			</div>
-			<!-- Subwrapper end -->
-		</div>
-		<!-- Main wrapper end -->
+                        <a href=""><i class="fa fa-youtube-play"></i></a>&nbsp;&nbsp;&nbsp;
+                        <a href="">Privacy Policies</a>
+                        <a href="">Terms and conditions</a>
+                        <a href="">Shipping and Refunds</a>
+                        <a href="">FAQ</a>
+                    </div>
+                </div>
+                <!-- Footer end -->
+            </div>
+            <!-- Subwrapper end -->
+        </div>
+        <!-- Main wrapper end -->
 </body>
 
 </html>
